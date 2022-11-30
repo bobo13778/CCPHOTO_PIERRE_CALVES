@@ -1,0 +1,36 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  color: red;
+}
+
+header {
+  background: #46575F;
+}
+
+.social, .mobileMenu {
+  color: #F2EDF1;
+}
+
+.mobileMenuItem {
+  color : #F5DF4D;
+}
+
+.desktop-menu {
+  text-decoration: none;
+  color: #F5DF4D;
+  font-size: 32px;
+}
+
+.desktop-menu:hover {
+  text-decoration : none;
+  color: #F5DF4D;
+  font-weight: bold;
+
+}
+
+.desktop-menu:active {
+  text-decoration: underline;
+}
