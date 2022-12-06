@@ -3,10 +3,29 @@ html {
 }
 
 body {
-  color: red;
+  color :#46575F;
 }
 
-header {
+#mainBg {
+  height: 90vh;
+  background-image: url(../img/bg.jpg);
+  background-size : cover;
+  background-position : center;
+}
+
+.styledTitle {
+  font-family: "Audiowide", cursive;
+  color: #F5DF4D;
+  font-size: 2.6rem;
+}
+
+@media (min-width:500px) {
+  .styledTitle {
+    font-size: 5rem;
+  }
+}
+
+header, footer {
   background: #46575F;
 }
 
@@ -25,12 +44,71 @@ header {
 }
 
 .desktop-menu:hover {
-  text-decoration : none;
+
   color: #F5DF4D;
   font-weight: bold;
 
 }
 
-.desktop-menu:active {
-  text-decoration: underline;
+.footerText, .footerLink {
+  text-decoration : none;
+  color: #F2EDF1;
+}
+
+.footerLink:hover {
+  color: #F2EDF1;
+  font-weight: bold;
+}
+
+.categoryButton {
+  background : #46575F;
+  color: #F5DF4D;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.categoryButton:hover {
+  font-weight: bold;
+}
+
+.categoryButton.active {
+  background: #F5DF4D;
+  color: #46575F;
+}
+
+.prestaTitle {
+  font-size: 2rem;
+}
+
+article > h2 {
+  font-family: "Audiowide", cursive;
+  font-size : 2.5rem;
+}
+
+article > p {
+  font-size: 1.5rem;
+}
+
+article > p > span {
+  font-size: 2rem;
+}
+
+.contactIcons {
+  color:#F5DF4D;
+}
+
+.contactTitle {
+  font-family: "Audiowide", cursive;
+}
+
+.submitBtn {
+  background: #46575F;
+  color:#F5DF4D;
+  border-radius: 5px;
+}
+
+.submitBtn:active {
+  background: #F5DF4D;
+  color: #46575F;
 }

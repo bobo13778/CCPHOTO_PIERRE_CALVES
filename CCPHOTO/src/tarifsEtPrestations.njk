@@ -9,4 +9,16 @@ galerieUnder : ""
 tarifsUnder : "text-decoration-underline"
 contactUnder : ""
 ---
-  <h1>Tarifs et prestations</h1>
+  <h1 class="prestaTitle mt-3 ms-3">Tarifs et prestations :</h1>
+  <ul class="list-unstyled mt-5 ms-5 me-5">
+    {%- for article in collections.article -%}
+      <li>
+        <article class="mb-5">
+          <h2>{{article.data.titre}}</h2>
+          <p>{{article.data.description}} <br>
+            <span>Tarif : {{article.data.tarif}} € </span>
+          </p>
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
