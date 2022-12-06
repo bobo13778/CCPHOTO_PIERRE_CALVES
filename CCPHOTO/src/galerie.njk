@@ -36,7 +36,12 @@ contactUnder : ""
 
   <!--pictures display-->
   <div class="container-fluid">
-        <ul class="row list-unstyled align-items-center" id="gallery">
+        <ul class="row list-unstyled align-items-center">
+          {%- for photo in collections.photo -%}
+          <li class="col-12 col-md-4">
+            <img src="../img{{photo.data.src}}" class="img-fluid galleryElement d-none {{photo.data.categorie}}">
+          </li>
+          {%- endfor -%}
         </ul>
   </div>
 
@@ -50,7 +55,7 @@ contactUnder : ""
     const coupleButton = document.getElementById("coupleButton");
     const buttons = document.querySelectorAll(".categoryButton");
 
-    const gallery = document.getElementById("gallery");
+    const gallery = document.querySelectorAll(".galleryElement");
 
     //Adding 'active' class to the button selected and displaying pictures
     buttons.forEach( (button) => {
@@ -58,18 +63,16 @@ contactUnder : ""
         buttons.forEach( (btn) => {
           btn.classList.remove("active");
         });
+        gallery.forEach( (photo) => {
+          if (photo.classList.contains(e.target.innerHTML)) {
+            photo.classList.remove("d-none");
+            photo.classList.add("mt-3");
+          } else {
+            photo.classList.add("d-none");
+            photo.classList.remove("mt-3");
+          };
+        });
         e.target.classList.add("active");
-        gallery.textContent = "";
-        for (let i=1; i<10; i++) {
-          let img = document.createElement("img");
-          img.src = `../img/galerie/${e.target.innerHTML+i}.jpg`;
-          img.classList.add("img-fluid");
-          let li = document.createElement("li");
-          li.classList.add("col-12", "col-md-4", "mt-3");
-          li.appendChild(img);
-          gallery.appendChild(li);
-          console.log(img.src);
-        };
       });
     });
 
