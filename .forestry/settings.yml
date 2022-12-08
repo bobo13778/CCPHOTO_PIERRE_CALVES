@@ -19,7 +19,7 @@ sections:
   templates:
   - prestation
 upload_dir: src/img/galerie
-public_path: "/src/img/galerie"
+public_path: "/galerie"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
