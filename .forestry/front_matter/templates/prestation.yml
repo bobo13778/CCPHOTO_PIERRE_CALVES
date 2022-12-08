@@ -1,4 +1,34 @@
 ---
 label: Prestation
 hide_body: true
-fields: []
+fields:
+- name: tags
+  type: text
+  config:
+    required: true
+  hidden: true
+  label: Tags
+  default: article
+- name: titre
+  type: text
+  config:
+    required: true
+  label: Titre
+  description: Indiquer le titre de la prestation
+- name: description
+  type: text
+  config:
+    required: true
+  label: Description
+  description: Description de la prestation
+- name: tarif
+  type: number
+  label: Tarif
+  description: Tarif de la prestation (uniquement la valeur, sans €)
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
