@@ -34,3 +34,5 @@ fields:
     maxSize: 64
   label: Fichier
   description: Télécharger la photo
+pages:
+- src/galerie/Mariage10.md
