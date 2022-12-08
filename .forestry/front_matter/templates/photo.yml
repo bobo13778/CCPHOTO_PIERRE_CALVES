@@ -35,4 +35,5 @@ fields:
   label: Fichier
   description: Télécharger la photo
 pages:
+- src/galerie/grossesse10.md
 - src/galerie/mariage9.md
