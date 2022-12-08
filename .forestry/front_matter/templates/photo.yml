@@ -1,4 +1,36 @@
 ---
 label: Photo
 hide_body: true
-fields: []
+fields:
+- name: tags
+  type: text
+  config:
+    required: true
+  hidden: true
+  label: Tags
+  default: photo
+- name: categorie
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - Baptême
+    - Bébé
+    - Couple
+    - Famille
+    - Grossesse
+    - Mariage
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Categorie
+  description: Indiquer la catégorie de la photo
+- name: src
+  type: file
+  config:
+    maxSize: 64
+  label: Fichier
+  description: Télécharger la photo
