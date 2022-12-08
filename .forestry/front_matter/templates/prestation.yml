@@ -32,5 +32,3 @@ fields:
     max: 
     step: 
     required: true
-pages:
-- src/prestations/Tout seul.md
